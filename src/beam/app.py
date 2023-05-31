@@ -2,11 +2,12 @@ import beam
 
 app = beam.App(
     name="hello-world",
-    cpu=2,
-    memory="8Gi",
+    cpu=8,
+    memory="32Gi",
+    gpu="T4",
     python_version="python3.8",
     python_packages=[
-        "numpy", "openai-whisper", "scipy", "ftfy",
+        "numpy", "openai-whisper", "scipy", "ftfy", "torch"
     ],
     commands=["apt-get update && apt-get install -y ffmpeg"]
     # commands=[
